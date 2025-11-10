@@ -34,6 +34,8 @@
           ]
            setChatMessages(newChatMessages);
 
+           setInputText('')
+           
           const response = await Chatbot.getResponseAsync(inputText);
           setChatMessages([
             ...newChatMessages,
@@ -45,7 +47,7 @@
           ])
 
           
-          setInputText('')
+          //setInputText('')
         }
         function getKeyEvent(event){
           event.key === 'Enter' && sendMessage();
